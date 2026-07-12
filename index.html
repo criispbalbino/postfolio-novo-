@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/create-build-395b8bef-4b11-4697-8ada-22f5e54d113f/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/create-build-395b8bef-4b11-4697-8ada-22f5e54d113f/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/create-build-395b8bef-4b11-4697-8ada-22f5e54d113f/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/create-build-395b8bef-4b11-4697-8ada-22f5e54d113f/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/create-build-395b8bef-4b11-4697-8ada-22f5e54d113f/styles.css">
+  <script src="_ds/create-build-395b8bef-4b11-4697-8ada-22f5e54d113f/_ds_bundle.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="video-slot.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #f2f2f0; }
+    a { color: #1a1a1a; }
+    a:hover { color: #4a4a4a; }
+    @keyframes cbFadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes cbLogoIn {
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes cbGradientShift {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+    @keyframes cbPfIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <meta name="ext-resource-dependency" content="media/about.jpg" data-resource-id="aboutPhoto" />
+  <meta name="ext-resource-dependency" content="media/post1.png" data-resource-id="post1" />
+  <meta name="ext-resource-dependency" content="media/post2.png" data-resource-id="post2" />
+  <meta name="ext-resource-dependency" content="media/post3.jpg" data-resource-id="post3" />
+  <meta name="ext-resource-dependency" content="media/post4.jpg" data-resource-id="post4" />
+  <meta name="ext-resource-dependency" content="media/post5.jpg" data-resource-id="post5" />
+  <meta name="ext-resource-dependency" content="media/post6.png" data-resource-id="post6" />
+  <meta name="ext-resource-dependency" content="media/bastidor-print.jpg" data-resource-id="bastidorPrint" />
+  <meta name="ext-resource-dependency" content="media/resultado.jpg" data-resource-id="resultadoPrint" />
+  <meta name="ext-resource-dependency" content="media/video1.mp4" data-resource-id="video1" />
+  <meta name="ext-resource-dependency" content="media/video6.mp4" data-resource-id="video6" />
+  <meta name="ext-resource-dependency" content="media/video2.mp4" data-resource-id="video2" />
+  <meta name="ext-resource-dependency" content="media/video3.mp4" data-resource-id="video3" />
+  <meta name="ext-resource-dependency" content="media/video4.mp4" data-resource-id="video4" />
+  <meta name="ext-resource-dependency" content="media/drone1.mp4" data-resource-id="drone1" />
+  <meta name="ext-resource-dependency" content="media/antes-depois.mp4" data-resource-id="antesDepois" />
+  <meta name="ext-resource-dependency" content="media/bastidor1.mp4" data-resource-id="bastidor1" />
+  <meta name="ext-resource-dependency" content="media/bastidor2.mp4" data-resource-id="bastidor2" />
+  <meta name="ext-resource-dependency" content="media/bastidor3.mp4" data-resource-id="bastidor3" />
+  <script>
+    (function () {
+      // Maps original media paths to bundler blob URLs (window.__resources)
+      // when running as a standalone bundle; returns the path unchanged in dev.
+      window.__cbResolve = function (p) {
+        if (!p || !window.__resources) return p;
+        if (!window.__cbMap) {
+          window.__cbMap = {};
+          var ms = document.querySelectorAll('meta[name="ext-resource-dependency"]');
+          for (var i = 0; i < ms.length; i++) {
+            var c = ms[i].getAttribute('content');
+            var id = ms[i].getAttribute('data-resource-id');
+            if (c && id && window.__resources[id]) window.__cbMap[c] = window.__resources[id];
+          }
+        }
+        return window.__cbMap[p] || p;
+      };
+    })();
+  </script>
+</helmet>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#1a1a1a"/>
+    <text x="50" y="46" text-anchor="middle" fill="#f2f2f0" font-family="Georgia, serif" font-size="26" font-weight="700">C&amp;B</text>
+    <text x="50" y="64" text-anchor="middle" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="6.5" letter-spacing="2">CREATE &amp; BUILD</text>
+  </svg>
+</template>
+<div style="font-family: var(--font-body); color: var(--cb-black); background: var(--cb-off-white)">
+
+  <!-- ============ NAV ============ -->
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 32px; background: rgba(242,242,240,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--cb-gray-light)">
+    <a href="#topo" style="display: inline-flex; text-decoration: none">
+      <img src="assets/logo-cb-black.png" alt="Create &amp; Build" style="height: 34px; width: auto; display: block">
+    </a>
+    <nav style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap">
+      <a href="#sobre" style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: color 300ms ease-in-out" style-hover="color: var(--cb-gray-mid)">Sobre</a>
+      <a href="#servicos" style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: color 300ms ease-in-out" style-hover="color: var(--cb-gray-mid)">Serviços</a>
+      <a href="#portfolio" style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: color 300ms ease-in-out" style-hover="color: var(--cb-gray-mid)">Portfólio</a>
+      <a href="#resultados" style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: color 300ms ease-in-out" style-hover="color: var(--cb-gray-mid)">Resultados</a>
+      <a href="#contato" style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; background: var(--cb-black); color: var(--cb-off-white); padding: 10px 20px; border: 1.5px solid var(--cb-black); transition: transform 300ms cubic-bezier(.16,1,.3,1), opacity 300ms ease-in-out" style-hover="opacity: 0.82; color: var(--cb-off-white); transform: translateY(-2px)">Contato</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="topo" data-screen-label="Hero" style="position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 24px 80px; background: #1a1a1a; color: var(--cb-off-white); box-sizing: border-box">
+    <div id="hero-bg" style="position: absolute; inset: -12%; z-index: 0; background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 45%, #232323 70%, #1a1a1a 100%); background-size: 220% 220%; animation: cbGradientShift 20s ease-in-out infinite; will-change: transform"></div>
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 36px; width: 100%">
+      <img src="assets/logo-cb-white.png" alt="Create &amp; Build" style="width: min(320px, 64vw); height: auto; animation: cbLogoIn 1s var(--ease-out) both">
+      <div style="display: flex; flex-direction: column; gap: 20px; align-items: center">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--cb-gray-soft); animation: cbFadeUp 0.9s var(--ease-out) 0.15s both">Storymaker · Videomaker · Social Media</div>
+        <h1 id="hero-title" style="margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(34px, 5.4vw, 62px); line-height: 1.1; letter-spacing: -0.01em; max-width: 820px; text-wrap: balance">Transformo momentos em conteúdo que conecta.</h1>
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: var(--cb-gray-soft); max-width: 520px; animation: cbFadeUp 0.9s var(--ease-out) 0.9s both">Do bruto ao editado, penso cada detalhe pra gerar resultado.</p>
+      </div>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: cbFadeUp 0.9s var(--ease-out) 1.05s both">
+        <a href="#portfolio" style="display: inline-flex; align-items: center; justify-content: center; padding: 17px 40px; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1; background: var(--cb-off-white); color: var(--cb-black); border: 1.5px solid var(--cb-off-white); text-decoration: none; transition: transform 300ms cubic-bezier(.16,1,.3,1), opacity 300ms ease-in-out" style-hover="opacity: 0.85; color: var(--cb-black); transform: translateY(-3px)">Ver portfólio</a>
+        <a href="https://wa.me/5548992016116" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; padding: 17px 40px; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1; border: 1.5px solid var(--cb-off-white); color: var(--cb-off-white); text-decoration: none; transition: background 300ms ease-in-out, color 300ms ease-in-out, transform 300ms cubic-bezier(.16,1,.3,1)" style-hover="background: var(--cb-off-white); color: var(--cb-black); transform: translateY(-3px)">Fale comigo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section id="sobre" data-screen-label="Sobre" style="padding: 120px 32px; box-sizing: border-box">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px; align-items: center">
+      <div data-reveal="1" style="position: relative">
+        <img src="media/about.jpg" data-res="media/about.jpg" alt="Crislaine Balbino" style="width: 100%; height: auto; display: block; filter: {{ fotoFiltro }}; border: 1px solid var(--cb-gray-light)">
+        <div style="position: absolute; left: 20px; bottom: 20px; background: var(--cb-black); color: var(--cb-off-white); padding: 10px 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase">Crislaine Balbino</div>
+      </div>
+      <div data-reveal="1" data-reveal-delay="120" style="display: flex; flex-direction: column; gap: 24px">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--cb-gray-soft)">Sobre mim</div>
+        <h2 style="margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.12; letter-spacing: -0.01em">A história é sua. A execução é minha.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: var(--cb-gray-mid)">Sou storymaker, videomaker e social media. Transformo momentos em conteúdo que conecta de verdade. Cuido de tudo, da captação até a edição final. Isso inclui vídeo, tomadas aéreas com drone, identidade visual, criação de logos e a gestão das redes.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: var(--cb-gray-mid)">O meu diferencial é entregar um material com estética cuidada e identidade visual forte. Do bruto ao editado, penso cada detalhe pra gerar resultado.</p>
+        <div data-reveal-group="1" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1.5px solid var(--cb-black); margin-top: 8px">
+          <div style="padding: 20px 16px 0 0; display: flex; flex-direction: column; gap: 8px">
+            <span data-count="1" style="font-family: var(--font-display); font-weight: 700; font-size: 22px">01</span>
+            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase">Captação</span>
+            <span style="font-size: 13px; line-height: 1.6; color: var(--cb-gray-soft)">Vídeo, foto e drone</span>
+          </div>
+          <div style="padding: 20px 16px 0; border-left: 1px solid var(--cb-gray-light); display: flex; flex-direction: column; gap: 8px">
+            <span data-count="2" style="font-family: var(--font-display); font-weight: 700; font-size: 22px">02</span>
+            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase">Edição</span>
+            <span style="font-size: 13px; line-height: 1.6; color: var(--cb-gray-soft)">Cor, ritmo e identidade</span>
+          </div>
+          <div style="padding: 20px 0 0 16px; border-left: 1px solid var(--cb-gray-light); display: flex; flex-direction: column; gap: 8px">
+            <span data-count="3" style="font-family: var(--font-display); font-weight: 700; font-size: 22px">03</span>
+            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase">Entrega</span>
+            <span style="font-size: 13px; line-height: 1.6; color: var(--cb-gray-soft)">Pronto pra publicar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <section id="servicos" data-screen-label="Serviços" style="padding: 120px 32px; background: var(--cb-white); border-top: 1px solid var(--cb-gray-light); border-bottom: 1px solid var(--cb-gray-light); box-sizing: border-box">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+      <div data-reveal="1" style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--cb-gray-soft)">Serviços</div>
+        <h2 style="margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.12; letter-spacing: -0.01em">Do roteiro ao corte final.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: var(--cb-gray-mid)">Tudo o que a sua marca precisa pra ter presença, em um só lugar.</p>
+      </div>
+      <div data-reveal-group="1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+        <sc-for list="{{ servicos }}" as="s" hint-placeholder-count="6">
+          <article data-service-card="1" style="display: flex; flex-direction: column; gap: 14px; background: var(--cb-white); border: 1px solid var(--cb-gray-light); padding: 32px 28px; transition: transform 400ms cubic-bezier(.16,1,.3,1), box-shadow 400ms ease-in-out" style-hover="transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-md); --ic-rot: -8deg; --ic-scale: 1.12; --ic-bg: var(--cb-black); --ic-color: var(--cb-off-white)">
+            <div style="display: flex; align-items: center; justify-content: space-between">
+              <span style="display: inline-flex; width: 44px; height: 44px; align-items: center; justify-content: center; border: 1.5px solid var(--cb-black); background: var(--ic-bg, transparent); color: var(--ic-color, var(--cb-black)); transform: rotate(var(--ic-rot, 0deg)) scale(var(--ic-scale, 1)); transition: transform 400ms cubic-bezier(.16,1,.3,1), background 300ms ease-in-out, color 300ms ease-in-out">{{ s.icone }}</span>
+              <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; color: var(--cb-gray-soft)">{{ s.num }}</span>
+            </div>
+            <h3 style="margin: 10px 0 0; font-family: var(--font-display); font-weight: 500; font-size: 22px; line-height: 1.15; letter-spacing: -0.01em">{{ s.titulo }}</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--cb-gray-mid)">{{ s.descricao }}</p>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PORTFÓLIO ============ -->
+  <section id="portfolio" data-screen-label="Portfólio" style="padding: 120px 32px; box-sizing: border-box; position: relative">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+      <div data-reveal="1" style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--cb-gray-soft)">Portfólio</div>
+        <h2 style="margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.12; letter-spacing: -0.01em">Trabalho que fala por si.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: var(--cb-gray-mid)">Toca cada vídeo direto no card. Filtra por categoria pra ver só o que te interessa.</p>
+      </div>
+
+      <div data-reveal="1" style="display: flex; gap: 10px; flex-wrap: wrap">
+        <sc-for list="{{ filtros }}" as="f" hint-placeholder-count="7">
+          <button onClick="{{ f.onClick }}" style="{{ f.style }}">{{ f.label }}</button>
+        </sc-for>
+      </div>
+
+      <!-- GALERIA DE VÍDEOS (YouTube) -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; align-items: start">
+        <sc-for list="{{ videos }}" as="v" hint-placeholder-count="8">
+          <figure data-vcard="{{ v.cat }}" style="{{ v.wrap }}">
+            <div style="position: relative; aspect-ratio: {{ v.ratio }}; background: #1a1a1a; overflow: hidden">
+              <div style="position: absolute; top: 12px; left: 12px; z-index: 2; display: inline-flex; align-items: center; gap: 6px; background: var(--cb-black); color: var(--cb-off-white); padding: 6px 12px; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; pointer-events: none">▶ Vídeo</div>
+              <iframe src="{{ v.embed }}" title="{{ v.titulo }}" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0"></iframe>
+            </div>
+            <figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 14px 0 0">
+              <span style="font-family: var(--font-display); font-weight: 500; font-size: 18px; line-height: 1.2">{{ v.titulo }}</span>
+              <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cb-gray-soft)">{{ v.catLabel }}</span>
+            </figcaption>
+          </figure>
+        </sc-for>
+      </div>
+
+      <!-- POSTS (design gráfico) -->
+      <div data-pf-group="1" style="display: {{ dispPosts }}; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: baseline; gap: 16px; border-bottom: 1.5px solid var(--cb-black); padding-bottom: 12px">
+          <h3 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 24px">Posts</h3>
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cb-gray-soft)">Design gráfico · Feed</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px">
+          <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-1" shape="rect" src="media/post1.png" placeholder="Post 1"></image-slot></div>
+          <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-2" shape="rect" src="media/post2.png" placeholder="Post 2"></image-slot></div>
+          <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-3" shape="rect" src="media/post3.jpg" placeholder="Post 3"></image-slot></div>
+          <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-4" shape="rect" src="media/post4.jpg" placeholder="Post 4"></image-slot></div>
+          <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-5" shape="rect" src="media/post5.jpg" placeholder="Post 5"></image-slot></div>
+          <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-6" shape="rect" src="media/post6.png" placeholder="Post 6"></image-slot></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTADOS & FEEDBACKS ============ -->
+  <section id="resultados" data-screen-label="Resultados" style="padding: 120px 32px; background: var(--cb-white); border-top: 1px solid var(--cb-gray-light); border-bottom: 1px solid var(--cb-gray-light); box-sizing: border-box">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+      <div data-reveal="1" style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--cb-gray-soft)">Resultados</div>
+        <h2 style="margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.12; letter-spacing: -0.01em">Conteúdo bonito é meio. Resultado é o fim.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: var(--cb-gray-mid)">Números de uma campanha que rodou por aqui. Presença que vira alcance de verdade.</p>
+      </div>
+
+      <div data-reveal-group="1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; border-top: 1.5px solid var(--cb-black)">
+        <div style="padding: 28px 24px 8px 0; display: flex; flex-direction: column; gap: 8px">
+          <span data-stat="1.3" data-dec="1" data-suffix=" mi" style="font-family: var(--font-display); font-weight: 700; font-size: clamp(38px, 5vw, 56px); line-height: 1">0 mi</span>
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cb-gray-soft)">Visualizações</span>
+        </div>
+        <div style="padding: 28px 24px 8px; border-left: 1px solid var(--cb-gray-light); display: flex; flex-direction: column; gap: 8px">
+          <span data-stat="9.9" data-dec="1" data-suffix=" mil" style="font-family: var(--font-display); font-weight: 700; font-size: clamp(38px, 5vw, 56px); line-height: 1">0 mil</span>
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cb-gray-soft)">Interações</span>
+        </div>
+        <div style="padding: 28px 24px 8px; border-left: 1px solid var(--cb-gray-light); display: flex; flex-direction: column; gap: 8px">
+          <span data-stat="450" data-dec="0" data-suffix="" style="font-family: var(--font-display); font-weight: 700; font-size: clamp(38px, 5vw, 56px); line-height: 1">0</span>
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cb-gray-soft)">Novos seguidores</span>
+        </div>
+        <div style="padding: 28px 0 8px 24px; border-left: 1px solid var(--cb-gray-light); display: flex; flex-direction: column; gap: 8px">
+          <span data-stat="1.8" data-dec="1" data-suffix=" mil" style="font-family: var(--font-display); font-weight: 700; font-size: clamp(38px, 5vw, 56px); line-height: 1">0 mil</span>
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cb-gray-soft)">Conteúdo compartilhado</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: start">
+        <div data-reveal="1" style="display: flex; flex-direction: column; gap: 14px">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cb-gray-soft)">Print do resultado</span>
+          <div data-zoom="1" style="overflow: hidden; border: 1px solid var(--cb-gray-light)"><image-slot id="resultado-print" shape="rect" src="media/resultado.jpg" fit="contain" placeholder="Print de métricas"></image-slot></div>
+        </div>
+        <div data-reveal="1" data-reveal-delay="120" style="display: flex; flex-direction: column; gap: 20px">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cb-gray-soft)">Feedbacks de clientes</span>
+          <sc-for list="{{ feedbacks }}" as="fb" hint-placeholder-count="3">
+            <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px; border-left: 2px solid var(--cb-black); padding: 4px 0 4px 20px">
+              <blockquote style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 18px; line-height: 1.4; color: var(--cb-black)">{{ fb.texto }}</blockquote>
+              <figcaption style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cb-gray-soft)">{{ fb.autor }}</figcaption>
+            </figure>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section id="contato" data-screen-label="Contato" style="padding: 120px 32px 64px; background: var(--cb-grad-dark); color: var(--cb-off-white); box-sizing: border-box">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+      <div data-reveal="1" style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--cb-gray-soft)">Contato</div>
+        <h2 style="margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.12; letter-spacing: -0.01em">Sua marca merece mais que um feed bonito.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: var(--cb-gray-soft)">Ingleses, Floripa e onde o seu evento acontecer.</p>
+      </div>
+      <div data-reveal-group="1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+        <a href="https://wa.me/5548992016116" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 10px; padding: 28px; border: 1px solid var(--cb-gray-mid); text-decoration: none; color: var(--cb-off-white); transition: background 300ms ease-in-out, transform 300ms cubic-bezier(.16,1,.3,1)" style-hover="background: rgba(242,242,240,0.08); color: var(--cb-off-white); transform: translateY(-4px)">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cb-gray-soft)">WhatsApp</span>
+          <span style="font-family: var(--font-display); font-size: 22px">(48) 99201-6116</span>
+        </a>
+        <a href="https://instagram.com/createebuild" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 10px; padding: 28px; border: 1px solid var(--cb-gray-mid); text-decoration: none; color: var(--cb-off-white); transition: background 300ms ease-in-out, transform 300ms cubic-bezier(.16,1,.3,1)" style-hover="background: rgba(242,242,240,0.08); color: var(--cb-off-white); transform: translateY(-4px)">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cb-gray-soft)">Instagram</span>
+          <span style="font-family: var(--font-display); font-size: 22px">@createebuild</span>
+        </a>
+        <a href="mailto:criisbalbino@hotmail.com" style="display: flex; flex-direction: column; gap: 10px; padding: 28px; border: 1px solid var(--cb-gray-mid); text-decoration: none; color: var(--cb-off-white); transition: background 300ms ease-in-out, transform 300ms cubic-bezier(.16,1,.3,1)" style-hover="background: rgba(242,242,240,0.08); color: var(--cb-off-white); transform: translateY(-4px)">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cb-gray-soft)">E-mail</span><span style="font-family: var(--font-display); font-size: 22px">criisbalbino@hotmail.com</span>
+          
+        </a>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; border-top: 1px solid var(--cb-gray-mid); padding-top: 32px">
+        <img src="assets/logo-cb-white.png" alt="Create &amp; Build" style="height: 40px; width: auto">
+        <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cb-gray-soft)">© 2026 Create &amp; Build · Ingleses, Florianópolis, SC</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp flutuante -->
+  <sc-if value="{{ mostrarWhats }}" hint-placeholder-val="{{ true }}">
+    <a href="https://wa.me/5548992016116" target="_blank" rel="noopener" aria-label="WhatsApp" style="position: fixed; right: 24px; bottom: 24px; z-index: 60; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background: var(--cb-black); color: var(--cb-off-white); border: 1px solid var(--cb-gray-mid); border-radius: 50%; box-shadow: var(--shadow-lg); transition: transform 300ms cubic-bezier(.16,1,.3,1)" style-hover="transform: translateY(-4px) scale(1.06); color: var(--cb-off-white)">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.5 15.1L2 22l5-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.5 7.5 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.4c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3a2.8 2.8 0 0 0-.8 2c0 1.2.9 2.4 1 2.6.1.2 1.7 2.6 4.1 3.7l1.4.5c.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"></path></svg>
+    </a>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;fotoPretoBranco&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Sobre&quot; },
+  &quot;botaoWhatsApp&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Contato&quot; }
+}">
+class Component extends DCLogic {
+  state = { filter: 'todos' };
+
+  componentDidMount() {
+    // run after the DOM (and streamed children) settle
+    this._raf = requestAnimationFrame(() => this._initMotion());
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.filter !== this.state.filter) {
+      // smooth fade between filters
+      document.querySelectorAll('#portfolio [data-pf-group]').forEach((g) => {
+        if (getComputedStyle(g).display !== 'none') {
+          g.style.animation = 'none';
+          void g.offsetWidth;
+          g.style.animation = 'cbPfIn 0.45s ease-in-out';
+        }
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    (this._observers || []).forEach((o) => o.disconnect());
+  }
+
+  _initMotion() {
+    this._observers = [];
+
+    // Standalone bundle: swap plain-img src for the inlined blob URL.
+    if (window.__cbResolve) {
+      document.querySelectorAll('img[data-res]').forEach((img) => {
+        const r = window.__cbResolve(img.getAttribute('data-res'));
+        if (r) img.src = r;
+      });
+    }
+
+    // ---- Hero title, word by word ----
+    const h1 = document.getElementById('hero-title');
+    if (h1 && !h1.dataset.split) {
+      h1.dataset.split = '1';
+      const words = h1.textContent.split(' ');
+      h1.textContent = '';
+      words.forEach((w, i) => {
+        const s = document.createElement('span');
+        s.textContent = w;
+        s.style.display = 'inline-block';
+        s.style.opacity = '0';
+        s.style.transform = 'translateY(26px)';
+        s.style.animation = 'cbFadeUp 0.6s cubic-bezier(.16,1,.3,1) ' + (0.35 + i * 0.09) + 's forwards';
+        h1.appendChild(s);
+        if (i < words.length - 1) h1.appendChild(document.createTextNode(' '));
+      });
+    }
+
+    // ---- Scroll reveals (single elements) ----
+    const revealIO = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          revealIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach((el) => {
+      const delay = el.dataset.revealDelay || '0';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(32px)';
+      el.style.transition = 'opacity 0.6s ease-in-out ' + delay + 'ms, transform 0.6s cubic-bezier(.16,1,.3,1) ' + delay + 'ms';
+      revealIO.observe(el);
+    });
+    this._observers.push(revealIO);
+
+    // ---- Staggered reveals (children of a group) ----
+    document.querySelectorAll('[data-reveal-group]').forEach((group) => {
+      Array.from(group.children).forEach((child, i) => {
+        child.style.opacity = '0';
+        child.style.transform = 'translateY(28px)';
+        child.style.transition = 'opacity 0.55s ease-in-out ' + (i * 90) + 'ms, transform 0.55s cubic-bezier(.16,1,.3,1) ' + (i * 90) + 'ms';
+      });
+      const gio = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            Array.from(e.target.children).forEach((c) => { c.style.opacity = '1'; c.style.transform = 'none'; });
+            gio.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      gio.observe(group);
+      this._observers.push(gio);
+    });
+
+    // ---- Parallax hero background ----
+    const heroBg = document.getElementById('hero-bg');
+    if (heroBg) {
+      this._onScroll = () => {
+        const y = window.scrollY || 0;
+        if (y < window.innerHeight) heroBg.style.transform = 'translateY(' + (y * 0.28) + 'px)';
+      };
+      window.addEventListener('scroll', this._onScroll, { passive: true });
+    }
+
+    // ---- Count-up numbers ----
+    const countIO = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { this._countUp(e.target); countIO.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach((el) => countIO.observe(el));
+    this._observers.push(countIO);
+
+    // ---- Stat count-up (decimals + suffix) ----
+    const statIO = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { this._statUp(e.target); statIO.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-stat]').forEach((el) => statIO.observe(el));
+    this._observers.push(statIO);
+
+    // ---- Image zoom on hover ----
+    document.querySelectorAll('[data-zoom]').forEach((wrap) => {
+      const slot = wrap.querySelector('image-slot');
+      if (!slot) return;
+      slot.style.display = 'block';
+      slot.style.width = '100%';
+      slot.style.height = '100%';
+      slot.style.transition = 'transform 0.55s cubic-bezier(.16,1,.3,1)';
+      wrap.addEventListener('mouseenter', () => { slot.style.transform = 'scale(1.06)'; });
+      wrap.addEventListener('mouseleave', () => { slot.style.transform = 'scale(1)'; });
+    });
+  }
+
+  _countUp(el) {
+    const target = parseInt(el.dataset.count, 10);
+    if (isNaN(target)) return;
+    const dur = 900;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min(1, (now - start) / dur);
+      const val = Math.round(p * target);
+      el.textContent = String(val).padStart(2, '0');
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  _statUp(el) {
+    const target = parseFloat(el.dataset.stat);
+    if (isNaN(target)) return;
+    const dec = parseInt(el.dataset.dec || '0', 10);
+    const suffix = el.dataset.suffix || '';
+    const dur = 1100;
+    const start = performance.now();
+    const fmt = (v) => v.toFixed(dec).replace('.', ',');
+    const step = (now) => {
+      const p = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(eased * target) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  _icone(d) {
+    return React.createElement('svg', {
+      width: 20, height: 20, viewBox: '0 0 24 24', fill: 'none',
+      stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round',
+    }, d.map((path, i) => React.createElement('path', { key: i, d: path })));
+  }
+
+  renderVals() {
+    const filter = this.state.filter;
+    const mostrar = (k) => (filter === 'todos' || filter === k) ? 'flex' : 'none';
+
+    const filtroBtn = (key, label) => {
+      const active = filter === key;
+      return {
+        key, label,
+        onClick: () => this.setState({ filter: key }),
+        style: {
+          fontFamily: 'var(--font-body)', fontSize: '11px', fontWeight: 600,
+          letterSpacing: '0.18em', textTransform: 'uppercase', lineHeight: 1,
+          padding: '12px 22px', cursor: 'pointer',
+          border: '1.5px solid var(--cb-black)',
+          backgroundColor: active ? '#1a1a1a' : 'transparent',
+          color: active ? '#f2f2f0' : '#1a1a1a',
+          transition: 'color 200ms ease-in-out',
+        },
+      };
+    };
+
+    const ic = this._icone.bind(this);
+    const servicos = [
+      { num: '01', titulo: 'Video Maker', descricao: 'Captação e edição de vídeos, incluindo tomadas aéreas com drone.',
+        icone: ic(['M2 6h13v12H2z', 'M15 10l7-4v12l-7-4']) },
+      { num: '02', titulo: 'Story Maker', descricao: 'Stories estratégicos que engajam e convertem.',
+        icone: ic(['M7 2h10v20H7z', 'M11 18h2']) },
+      { num: '03', titulo: 'Social Media', descricao: 'Gestão completa de redes sociais.',
+        icone: ic(['M18 8a3 3 0 1 0-3-3 3 3 0 0 0 3 3z', 'M6 15a3 3 0 1 0-3-3 3 3 0 0 0 3 3z', 'M18 22a3 3 0 1 0-3-3 3 3 0 0 0 3 3z', 'M8.6 10.5l6.8-3.9', 'M8.6 13.5l6.8 3.9']) },
+      { num: '04', titulo: 'Identidade Visual', descricao: 'Criação de logos e identidade de marca.',
+        icone: ic(['M12 19l7-7 3 3-7 7-3-3z', 'M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z', 'M2 2l7.6 7.6']) },
+      { num: '05', titulo: 'Design Gráfico', descricao: 'Criação de posts e materiais visuais.',
+        icone: ic(['M3 3h7v7H3z', 'M14 3h7v7h-7z', 'M3 14h7v7H3z', 'M14 14h7v7h-7z']) },
+      { num: '06', titulo: 'Cobertura de Eventos', descricao: 'Registro fotográfico e audiovisual completo.',
+        icone: ic(['M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z', 'M12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z']) },
+    ];
+
+    const feedbacks = [
+      { texto: '“Ela entendeu a minha marca melhor do que eu. O feed virou outra coisa.”', autor: 'Cliente Create & Build' },
+      { texto: '“Amei trabalhar com ela. Entrega rápida e um resultado impecável.”', autor: 'Cliente Create & Build' },
+      { texto: '“O que mais me marcou foi a atenção que ela dá pra cada detalhe do cliente.”', autor: 'Cliente Create & Build' },
+    ];
+
+    const catLabels = {
+      drone: 'Drone', eventos: 'Eventos', antesdepois: 'Antes e Depois',
+      institucional: 'Institucional', edicao: 'Edição', bastidores: 'Bastidores',
+    };
+    // Priority: institucional and drone first (most impactful visually).
+    const rawVideos = [
+      { id: 'SMQ21yTgRb0', titulo: 'Institucional 1', cat: 'institucional', vertical: true },
+      { id: 'Uj-s3H6riYI', titulo: 'Institucional 2', cat: 'institucional', vertical: true },
+      { id: 'eDoEych_7Nc', titulo: 'Institucional 3', cat: 'institucional', vertical: true },
+      { id: 'iJ-AfX9eFFk', titulo: 'Captação Aérea', cat: 'drone', vertical: false },
+      { id: '4vg2U3adTgQ', titulo: 'Cobertura de Evento 1', cat: 'eventos', vertical: false },
+      { id: '3HwIFIsT-4E', titulo: 'Cobertura de Evento 2', cat: 'eventos', vertical: true },
+      { id: '1B1kiBv6Adg', titulo: 'Cobertura de Evento 3', cat: 'eventos', vertical: true },
+      { id: '6OYfHUsj42E', titulo: 'Vídeo Editado', cat: 'edicao', vertical: true },
+      { id: 'fUjmm87-R6Y', titulo: 'Com Edição vs Sem Edição', cat: 'antesdepois', vertical: true },
+      { id: 'MLZmH3_x6CU', titulo: 'Vídeo Sem Edição', cat: 'antesdepois', vertical: false },
+      { id: 's3swaUix3zU', titulo: 'Vídeo Com Edição', cat: 'antesdepois', vertical: false },
+      { id: 'T_BKlsS0TOE', titulo: 'Bastidores 1', cat: 'bastidores', vertical: true },
+      { id: 'TFiuRefTqss', titulo: 'Bastidores 2', cat: 'bastidores', vertical: true },
+      { id: 'X82oB3u3yEo', titulo: 'Bastidores 3', cat: 'bastidores', vertical: true },
+    ];
+    const videos = rawVideos.map((v) => {
+      const show = (filter === 'todos' || filter === v.cat);
+      return {
+        cat: v.cat,
+        titulo: v.titulo,
+        catLabel: catLabels[v.cat],
+        ratio: v.vertical ? '9 / 16' : '16 / 9',
+        embed: 'https://www.youtube.com/embed/' + v.id + '?rel=0&modestbranding=1',
+        wrap: {
+          margin: 0,
+          display: show ? 'flex' : 'none',
+          flexDirection: 'column',
+          gap: 0,
+          maxWidth: v.vertical ? '340px' : 'none',
+        },
+      };
+    });
+
+    return {
+      servicos,
+      feedbacks,
+      videos,
+      filtros: [
+        filtroBtn('todos', 'Todos'),
+        filtroBtn('drone', 'Drone'),
+        filtroBtn('institucional', 'Institucional'),
+        filtroBtn('eventos', 'Eventos'),
+        filtroBtn('antesdepois', 'Antes e Depois'),
+        filtroBtn('edicao', 'Edição'),
+        filtroBtn('bastidores', 'Bastidores'),
+        filtroBtn('posts', 'Posts'),
+      ],
+      dispPosts: (filter === 'todos' || filter === 'posts') ? 'flex' : 'none',
+      fotoFiltro: (this.props.fotoPretoBranco ?? true) ? 'grayscale(100%)' : 'none',
+      mostrarWhats: this.props.botaoWhatsApp ?? true,
+    };
+  }
+}
+
+</script>
+</body>
+</html>
