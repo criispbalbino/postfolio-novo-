@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Create & Build — Color tokens
+   Minimal editorial monochrome. Black → off-white with a calibrated gray ramp.
+   ========================================================================== */
+
+:root {
+  /* ---- Base palette (brand-defined) ---- */
+  --cb-black:      #1a1a1a;  /* Preto principal   */
+  --cb-off-white:  #f2f2f0;  /* Off-white         */
+  --cb-gray-light: #e8e8e5;  /* Cinza claro       */
+  --cb-gray-mid:   #4a4a4a;  /* Cinza médio       */
+  --cb-gray-soft:  #9a9a9a;  /* Cinza suave       */
+  --cb-white:      #ffffff;
+
+  /* ---- Extended neutral ramp (derived, for UI depth) ---- */
+  --cb-neutral-900: #1a1a1a;
+  --cb-neutral-700: #333333;
+  --cb-neutral-600: #4a4a4a;
+  --cb-neutral-400: #9a9a9a;
+  --cb-neutral-300: #c4c4c1;
+  --cb-neutral-200: #e8e8e5;
+  --cb-neutral-100: #f2f2f0;
+  --cb-neutral-000: #ffffff;
+
+  /* ---- Subtle gradients (motion, dynamic backgrounds, transitions) ---- */
+  --cb-grad-dark:  linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%); /* @kind color */
+  --cb-grad-light: linear-gradient(135deg, #f2f2f0 0%, #e8e8e5 100%); /* @kind color */
+  --cb-grad-fade:  linear-gradient(180deg, rgba(26,26,26,0) 0%, rgba(26,26,26,0.72) 100%); /* @kind color */
+
+  /* ---- Semantic aliases ---- */
+  --surface-page:    var(--cb-off-white);
+  --surface-card:    var(--cb-white);
+  --surface-inverse: var(--cb-black);
+  --surface-muted:   var(--cb-gray-light);
+
+  --text-primary:   var(--cb-black);
+  --text-secondary: var(--cb-gray-mid);
+  --text-muted:     var(--cb-gray-soft);
+  --text-inverse:   var(--cb-off-white);
+
+  --border-subtle:  var(--cb-gray-light);
+  --border-strong:  var(--cb-black);
+
+  --accent:         var(--cb-black);
+  --accent-inverse: var(--cb-off-white);
+}
