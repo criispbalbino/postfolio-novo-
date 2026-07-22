@@ -46,6 +46,7 @@
   <meta name="ext-resource-dependency" content="media/post4.jpg" data-resource-id="post4" />
   <meta name="ext-resource-dependency" content="media/post5.jpg" data-resource-id="post5" />
   <meta name="ext-resource-dependency" content="media/post6.png" data-resource-id="post6" />
+  <meta name="ext-resource-dependency" content="media/post7.png" data-resource-id="post7" />
   <meta name="ext-resource-dependency" content="media/bastidor-print.jpg" data-resource-id="bastidorPrint" />
   <meta name="ext-resource-dependency" content="media/resultado.jpg" data-resource-id="resultadoPrint" />
   <meta name="ext-resource-dependency" content="media/video1.mp4" data-resource-id="video1" />
@@ -209,7 +210,7 @@
       <!-- POSTS (design gráfico) -->
       <div data-pf-group="1" style="display: {{ dispPosts }}; flex-direction: column; gap: 20px">
         <div style="display: flex; align-items: baseline; gap: 16px; border-bottom: 1.5px solid var(--cb-black); padding-bottom: 12px">
-          <h3 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 24px">Posts</h3>
+          <h3 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 24px">Designs</h3>
           <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cb-gray-soft)">Design gráfico · Feed</span>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px">
@@ -219,6 +220,27 @@
           <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-4" shape="rect" src="media/post4.jpg" placeholder="Post 4"></image-slot></div>
           <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-5" shape="rect" src="media/post5.jpg" placeholder="Post 5"></image-slot></div>
           <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-6" shape="rect" src="media/post6.png" placeholder="Post 6"></image-slot></div>
+          <div data-zoom="1" style="aspect-ratio: 4 / 5; overflow: hidden"><image-slot id="post-7" shape="rect" src="media/post7.png" placeholder="Post 7"></image-slot></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SITES & PORTFÓLIOS ============ -->
+  <section id="sites" data-screen-label="Sites" style="padding: 120px 32px; background: var(--cb-off-white); box-sizing: border-box">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px; align-items: center">
+      <div data-reveal="1" style="max-width: 420px; justify-self: center">
+        <a href="https://teammb.vercel.app/" target="_blank" rel="noopener" style="display: block">
+          <img src="media/team-mb-hero.png" data-res="media/team-mb-hero.png" alt="Site Team MB — Coach Mirian Bertolini" style="width: 100%; height: auto; display: block; border: 1px solid var(--cb-gray-light)">
+        </a>
+      </div>
+      <div data-reveal="1" data-reveal-delay="120" style="display: flex; flex-direction: column; gap: 24px">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--cb-gray-soft)">Serviço</div>
+        <h2 style="margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.12; letter-spacing: -0.01em">Criação de Sites e Portfólios Profissionais</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: var(--cb-gray-mid)">Crio portfólios e sites únicos que mostram minha expertise e geram resultado. Cada projeto tem identidade visual cuidada, navegação intuitiva e otimização completa pra converter visitantes em clientes.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: var(--cb-gray-mid)">Veja o case da Coach Mirian, que transformou sua consultoria online em uma plataforma de alta performance.</p>
+        <div>
+          <a href="https://teammb.vercel.app/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; padding: 17px 40px; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1; background: var(--cb-black); color: var(--cb-off-white); border: 1.5px solid var(--cb-black); text-decoration: none; transition: opacity 300ms ease-in-out, transform 300ms cubic-bezier(.16,1,.3,1)" style-hover="opacity: 0.82; color: var(--cb-off-white); transform: translateY(-3px)">Ver case da Mirian</a>
         </div>
       </div>
     </div>
@@ -519,8 +541,8 @@ class Component extends DCLogic {
         icone: ic(['M12 19l7-7 3 3-7 7-3-3z', 'M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z', 'M2 2l7.6 7.6']) },
       { num: '05', titulo: 'Design Gráfico', descricao: 'Criação de posts e materiais visuais.',
         icone: ic(['M3 3h7v7H3z', 'M14 3h7v7h-7z', 'M3 14h7v7H3z', 'M14 14h7v7h-7z']) },
-      { num: '06', titulo: 'Cobertura de Eventos', descricao: 'Registro fotográfico e audiovisual completo.',
-        icone: ic(['M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z', 'M12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z']) },
+      { num: '06', titulo: 'Web Designer', descricao: 'Sites e portfólios profissionais que convertem.',
+        icone: ic(['M2 4h20v13H2z', 'M8 21h8', 'M12 17v4']) },
     ];
 
     const feedbacks = [
@@ -580,7 +602,7 @@ class Component extends DCLogic {
         filtroBtn('antesdepois', 'Antes e Depois'),
         filtroBtn('edicao', 'Edição'),
         filtroBtn('bastidores', 'Bastidores'),
-        filtroBtn('posts', 'Posts'),
+        filtroBtn('posts', 'Designs'),
       ],
       dispPosts: (filter === 'todos' || filter === 'posts') ? 'flex' : 'none',
       fotoFiltro: (this.props.fotoPretoBranco ?? true) ? 'grayscale(100%)' : 'none',
